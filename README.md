@@ -24,3 +24,7 @@ Python reference model: Provides a software model for functional comparison with
 FPGA synthesis: Uses Vivado for synthesis, implementation, timing analysis, and resource utilization reports.
 
 RTL verification: Supports testbench-based validation of arithmetic operations and CNN layer outputs.
+
+## Architecture
+
+The accelerator follows a modular processing pipeline:
