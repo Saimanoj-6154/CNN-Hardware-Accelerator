@@ -178,5 +178,23 @@ Compatible FPGA device supported by the selected Vivado release
 
 * Matplotlib (optional, for plotting results)
 
-A Verilog simulator, such as Icarus Verilog or Vivado Simulator
+* A Verilog simulator, such as Icarus Verilog or Vivado Simulator
+
+### Future Improvements
+
+Add a configurable number of parallel MAC units.
+
+Implement line buffers and sliding-window convolution.
+
+Explore INT8 quantization and fixed-point precision.
+
+Support multiple CNN layers and configurable kernel sizes.
+
+Add AXI4-Lite control and AXI4-Stream input/output interfaces.
+
+Explore double buffering and pipelined data transfers.
+
+Benchmark different parallelism and resource-sharing configurations.
+
+Deploy the accelerator on an FPGA development board and measure real performance.
 
