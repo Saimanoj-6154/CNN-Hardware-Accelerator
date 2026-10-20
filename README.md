@@ -118,3 +118,46 @@ The pooling stage reduces the spatial dimensions of feature maps. A max-pooling 
 
 A finite-state machine coordinates input loading, weight access, convolution execution, activation, pooling, and output storage.
 
+### Repository Structure
+
+```
+  cnn-hardware-accelerator/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── Makefile
+├── rtl/
+│   ├── cnn_accelerator_top.v
+│   ├── convolution_engine.v
+│   ├── mac_unit.v
+│   ├── relu_unit.v
+│   ├── max_pool_unit.v
+│   ├── input_buffer.v
+│   ├── weight_buffer.v
+│   ├── output_buffer.v
+│   └── cnn_controller.v
+├── tb/
+│   ├── tb_cnn_accelerator.v
+│   ├── tb_mac_unit.v
+│   ├── tb_convolution_engine.v
+│   └── test_vectors/
+├── python/
+│   ├── cnn_reference.py
+│   ├── quantize_weights.py
+│   ├── generate_test_vectors.py
+│   └── compare_outputs.py
+├── constraints/
+│   └── timing.xdc
+├── vivado/
+│   └── README.md
+├── scripts/
+│   ├── run_simulation.sh
+│   └── run_synthesis.tcl
+├── docs/
+│   ├── architecture.md
+│   ├── verification.md
+│   └── performance.md
+└── results/
+    └── README.md
+```
+
