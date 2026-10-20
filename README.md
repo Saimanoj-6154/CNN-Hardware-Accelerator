@@ -28,3 +28,42 @@ RTL verification: Supports testbench-based validation of arithmetic operations a
 ## Architecture
 
 The accelerator follows a modular processing pipeline:
+
+```
+Input Image / Feature Map
+                   |
+                   v
+        +----------------------+
+        | Input Buffer / BRAM  |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | Convolution Engine   |
+        | MAC Processing Units |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | Bias Addition        |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | ReLU Activation      |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | Pooling Unit         |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | Output Buffer        |
+        +----------------------+
+                   |
+                   v
+          CNN Feature Output
+```
+---
