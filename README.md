@@ -160,4 +160,23 @@ A finite-state machine coordinates input loading, weight access, convolution exe
 └── results/
     └── README.md
 ```
+### Requirements
+
+## Hardware Design
+
+Xilinx FPGA development board, if physical deployment is intended
+
+Compatible FPGA device supported by the selected Vivado release
+
+## Software
+
+* Xilinx Vivado
+
+* Python 3.x
+
+* NumPy
+
+* Matplotlib (optional, for plotting results)
+
+A Verilog simulator, such as Icarus Verilog or Vivado Simulator
 
