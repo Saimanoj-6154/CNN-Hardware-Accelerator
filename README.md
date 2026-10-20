@@ -71,3 +71,50 @@ The convolution engine performs the dominant arithmetic operations. Input featur
 
 The architecture can be extended with additional convolution layers, configurable kernel sizes, multiple MAC units, and a controller for sequencing CNN operations.
 
+### Hardware Design
+
+## 1. Convolution Engine
+
+The convolution engine computes weighted sums over local regions of an input feature map.
+
+For a single output element:
+
+[
+Y_{i,j}=\sum_{m=0}^{K-1}\sum_{n=0}^{K-1}
+X_{i+m,j+n}W_{m,n}+b
+]
+
+Where:
+
+(X) represents the input feature map.
+
+(W) represents the convolution kernel.
+
+(b) is the bias.
+
+(K) is the kernel dimension.
+
+(Y) is the output feature map.
+
+## 2. Multiply-Accumulate Unit
+
+The MAC unit performs multiplication and accumulation operations required by convolution layers. Multiple MAC units can operate in parallel to increase processing throughput.
+
+## 3. Activation Unit
+
+The ReLU activation function is defined as:
+
+[
+\operatorname{ReLU}(x)=\max(0,x)
+]
+
+This operation can be implemented using a sign check and a zero-selection datapath.
+
+## 4. Pooling Unit
+
+The pooling stage reduces the spatial dimensions of feature maps. A max-pooling implementation selects the maximum value within a local window.
+
+## 5. Control Unit
+
+A finite-state machine coordinates input loading, weight access, convolution execution, activation, pooling, and output storage.
+
