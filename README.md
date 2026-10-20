@@ -67,3 +67,7 @@ Input Image / Feature Map
           CNN Feature Output
 ```
 ---
+The convolution engine performs the dominant arithmetic operations. Input feature maps and weights are supplied to the processing datapath, where multiplication and accumulation produce the output feature maps.
+
+The architecture can be extended with additional convolution layers, configurable kernel sizes, multiple MAC units, and a controller for sequencing CNN operations.
+
